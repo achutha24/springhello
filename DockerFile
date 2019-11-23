@@ -1,0 +1,5 @@
+FROM java:8
+COPY /var/lib/jenkins/workspace/spring-hello/target/springhello-1.0.jar /usr/src
+WORKDIR /usr/src
+EXPOSE 8085
+CMD ["java", "-jar", "springhello-1.0.jar"]
